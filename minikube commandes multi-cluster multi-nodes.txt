@@ -1,0 +1,24 @@
+|1|TGp54y2C5MgWjKwq8YHxJZof6PI=|FY5mmM3xC+t6o08mJHQ/xepLU9Q= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGZyeOv4RNiAoQSZwuWJWwAZdzBDiBerF9NZwaHCxJC/oQpX9GxYg03AfnOvlU/q0nFc6IYw5jtOH3S0pYS5G8U=
+|1|cYHFRlzh0QR8SXLOItNuSNX484Y=|utzeAYYzMEsd7/Itr3ZuOtRbk6g= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGZyeOv4RNiAoQSZwuWJWwAZdzBDiBerF9NZwaHCxJC/oQpX9GxYg03AfnOvlU/q0nFc6IYw5jtOH3S0pYS5G8U=
+
+#création raccourci kubectl devient k:
+alias k=kubectl
+# demarer minikube avec la config création multi nodes:
+minikube start --nodes 3 -p node
+# lister tous les contexts presents sur la machine (avec ou sans minikube) :
+minikube profile list
+#lister tous les contexts et signalement de l'actif:
+kubectl config get-contexts
+#Changer de context :
+kubectl config use-context node
+#lister tous les pods présents sur le node actif du cluster en-cours:
+kubectl get pods -A
+#lister tous les nodes du cluster en-cours avec details:
+kubectl get nodes -o wide
+#acceder a un autre node du cluster encours :
+minikube ssh -p node --node=node-m02
+#lister contenu d'un noeud d'un certain context:
+minikube ssh -p node --node=node-m02 ls
+
+
+
