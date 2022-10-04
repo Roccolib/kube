@@ -1,16 +1,26 @@
-|1|TGp54y2C5MgWjKwq8YHxJZof6PI=|FY5mmM3xC+t6o08mJHQ/xepLU9Q= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGZyeOv4RNiAoQSZwuWJWwAZdzBDiBerF9NZwaHCxJC/oQpX9GxYg03AfnOvlU/q0nFc6IYw5jtOH3S0pYS5G8U=
-|1|cYHFRlzh0QR8SXLOItNuSNX484Y=|utzeAYYzMEsd7/Itr3ZuOtRbk6g= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGZyeOv4RNiAoQSZwuWJWwAZdzBDiBerF9NZwaHCxJC/oQpX9GxYg03AfnOvlU/q0nFc6IYw5jtOH3S0pYS5G8U=
-
+#ajout ric comme user dans docker:
+sudo usermod -aG docker ric
+#avant minikube start, donner les droits de création des ces dossiers
+sudo chown -R $USER $HOME/.minikube; chmod -R u+wrx $HOME/.minikube; chmod -R u+wrx $HOME/.kube
+#minikube, docker driver by default:
+minikube config set driver docker
+#start minikube once with docker driver:
+minikube start --driver=docker
+minikube start --cni=flannel --nodes 3 -p nodea
 #création raccourci kubectl devient k:
 alias k=kubectl
 # demarer minikube avec la config création multi nodes:
-minikube start --nodes 3 -p node
+minikube start --nodes 3 -p node --network-plugin=cni --cni=bridge
+
+minikube start --nodes 3 -p node --network-plugin=cni --cni=calico --extra-config=kubeadm.pod-network-cidr=192.168.0.0/16
 # lister tous les contexts presents sur la machine (avec ou sans minikube) :
 minikube profile list
 #lister tous les contexts et signalement de l'actif:
 kubectl config get-contexts
 #Changer de context :
-kubectl config use-context node
+kubectl config use-context nodea
+#effacer un profile minikube:
+minikube delete -p nodekubectl
 #lister tous les pods présents sur le node actif du cluster en-cours:
 kubectl get pods -A
 #lister tous les nodes du cluster en-cours avec details:
@@ -19,6 +29,22 @@ kubectl get nodes -o wide
 minikube ssh -p node --node=node-m02
 #lister contenu d'un noeud d'un certain context:
 minikube ssh -p node --node=node-m02 ls
+#copy from node to node via ssh:
+scp admin.conf 192.168.67.3:/etc/kubernetes/admin.conf
+scp /etc/kubernetes/admin.conf 192.168.67.4:/etc/kubernetes/admin.conf
+# activation de kubectl:
+	. from /etc/kubernetes : scp admin.conf 192.168.67.3:/etc/kubernetes/admin.conf
+	. enter to target node : minikube ssh -p node --node=node-m02 /etc/kubernetes
+	. cp admin.conf /.kube/config
+ 	. sudo chown $(id -u):$(id -g) $HOME/docker/.kube/config
+
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="192.168.49.2" accept'
 
 
 
+autres :
+#ajout utilisateur dans chaque noeud:
+sudo adduser ric
+ sudo mkdir -p /home/ric/.minikube /home/ric/.kube
+#ajout ric comme user dans docker:
+sudo usermod -aG docker ric
