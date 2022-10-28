@@ -23,20 +23,29 @@ kubectl config use-context nodea
 minikube delete -p nodekubectl
 #lister tous les pods présents sur le node actif du cluster en-cours:
 kubectl get pods -A
+#si besoin ajouter l'image manuellement chez minikube:
+minikube image load orchestrepy:150322
 #lister tous les nodes du cluster en-cours avec details:
 kubectl get nodes -o wide
 #acceder a un autre node du cluster encours :
-minikube ssh -p node --node=node-m02
+minikube ssh -p minikube --node=minikube-m02
+# lister tous les endpoints d'un namespace:
+k get endpoints
 #lister contenu d'un noeud d'un certain context:
 minikube ssh -p node --node=node-m02 ls
-#copy from node to node via ssh:
+#executer commande minikube vers autre node:
+
+#copy from host to node via ssh:
 scp admin.conf 192.168.67.3:/etc/kubernetes/admin.conf
 scp /etc/kubernetes/admin.conf 192.168.67.4:/etc/kubernetes/admin.conf
+#copy from external node to host:
+scp 82.165.169.240:/home/ric/recu/orchestrepy.tar /home/ric/orchestrepy.tar
 # activation de kubectl:
 	. from /etc/kubernetes : scp admin.conf 192.168.67.3:/etc/kubernetes/admin.conf
 	. enter to target node : minikube ssh -p node --node=node-m02 /etc/kubernetes
 	. cp admin.conf /.kube/config
  	. sudo chown $(id -u):$(id -g) $HOME/docker/.kube/config
+	. sudo chmod 666 /var/run/docker.sock
 
 firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="192.168.49.2" accept'
 
