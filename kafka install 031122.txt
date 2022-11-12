@@ -2,6 +2,7 @@ tcpdump -i any -c10 -nn -A port 5000
 
 docker save -o baseapis31.tar baseapis:05112231
 sudo ctr -n=k8s.io images import baseapis31.tar
+k replace --force -f depl.yaml
 
 url = 'http://prodsvc.co2forumm.svc.cluster.local:5001/messageBroker'
 
