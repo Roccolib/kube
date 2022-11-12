@@ -17,6 +17,8 @@ kafka-topics --bootstrap-server kafka-service.co2forumm.svc.cluster.local:9092 -
 kafka-topics --bootstrap-server kafka-service.co2forumm.svc.cluster.local:9092 --topic topicDiscMessage --describe
 #detail of topic:partition:offsets(records):
 kafka-run-class kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic topicDiscMessage
+delete a topic:
+kafka-topics --bootstrap-server kafka-service.co2forumm.svc.cluster.local:9092 --delete --topic topicName
 #produce a message to a topic:
 kafka-console-producer --broker-list localhost:9092 --topic topicDiscMessage
 #consum a message from a topic:
