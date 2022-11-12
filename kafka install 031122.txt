@@ -2,6 +2,8 @@ tcpdump -i any -c10 -nn -A port 5000
 
 url = 'http://prodsvc.co2forumm.svc.cluster.local:5001/messageBroker'
 
+#liste des group.id:
+kafka-consumer-groups --all-topics --bootstrap-server kafka-service.co2forumm:9092 --list
 #topics list:
 kafka-topics --bootstrap-server kafka-service.co2forumm.svc.cluster.local:9092 --list
 
