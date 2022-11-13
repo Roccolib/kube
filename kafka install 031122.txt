@@ -10,6 +10,9 @@ url = 'http://prodsvc.co2forumm.svc.cluster.local:5001/messageBroker'
 kafka-console-consumer --bootstrap-server kafka-service.co2forumm:9092 --topic topicDiscMessage --group test-consumer-group
 #liste des group.id:
 kafka-consumer-groups --all-topics --bootstrap-server kafka-service.co2forumm:9092 --list
+#creation topic:
+kafka-topics --create --bootstrap-server kafka-service.co2forumm:9092 --replication-factor 1 --partitions 1 --topic topicDiscMessage
+
 #topics list:
 kafka-topics --bootstrap-server kafka-service.co2forumm.svc.cluster.local:9092 --list
 
