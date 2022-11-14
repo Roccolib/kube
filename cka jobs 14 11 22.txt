@@ -1,0 +1,133 @@
+This position will be responsible for the implementation and support of AWS cloud infrastructure. This position requires a seasoned individual, who has hands-on experience in IT infrastructure management on AWS, Infrastructure as Code, and Container Orchestration from the ground up to support critical business applications.
+
+Must Have Skills:
+AWS Services: EC2, Load Balancers, S3, KMS, SNS, SES, CloudWatch, CloudFront, Backup, RDS, DynamoDB, DocumentDB, NACL, Security Groups, VPC Peering, Transit Gateway, GuardDuty, Athena
+Linux: Knowledge of Debian/Ubuntu OS, Installation of packages, Cron Jobs, Troubleshooting, User Management
+Security: Knowledge of cryptography
+Scripting: Bash or python
+Infrastructure as Code: Terraform and CloudFormation
+Containers & Orchestration: Kubernetes and Docker
+
+Good to Have Skills:
+Good interpersonal skills with the ability to present ideas in user-friendly language.
+Successful experience working in a team-oriented, collaborative environment.
+Proven analytical and problem-solving abilities.
+Excellent communication both written and verbal.
+Strategic thinker with strong influencing skills and the ability to build consensus.
+Strong action orientation; ability to make things happen.
+Facilitates team and stakeholder meetings effectively
+Holds regular status meetings/scrum meeting
+Resolves and/or escalates issues in a timely fashion
+Understands how to communicate difficult/sensitive information tactfull
+
+Job Responsibilities:
+Setup and build AWS infrastructure related to various resources VPC, EC2, S3, EBS, ELB, Security Group, and RDS, AMI
+Experience working with IAM in order to create new users, roles, and groups, policies.
+Design and implementing using VPC and managing security using IAM Policies, Security Groups and NACL.
+Experience on creating Backup using backup plans and restore from the snapshot.
+Knowledge of KMS for encrypting EBS Volumes and Snapshots.
+Hardening of the network security using security group and NACL.
+Experience working with SNS.
+Understand storage requirements, create configure S3 Bucket, Bucket Lifecycle, Bucket Security and replication.
+Strong knowledge of encrypting S3 Bucket and EFS using KMS.
+Should have experience with CloudTrail and config for compliance.
+Conduct vulnerability assessments and Security Auditing of AWS Environments using various open-source and commercial tools.
+Providing rich client-specific reports.
+Hands-on experience on Infrastructure, Networks and server.
+Hands on experience of Container including managing container, create Docker files and optimize docker images.
+Requirements gathering and planning and designing the AWS services according the service and architecture needs.
+Operate and maintain critical AWS application, distributed databases clusters, and multi-tier application.
+Respond to and resolve debugging issues involving microservices and distributed systems.
+Experience on Creation, Management and Review of Change Requests for Tasks and Issues.
+Experience on High level Design and Low Level Design Documents.
+Experience on System performance monitoring & optimization.
+Experience on Implementing various architecture designs for High availability, Scalability, and Disaster recovery at region level as per the client requirements.
+Configure, Manage and troubleshoot Kubernetes Clusters and containers.
+Write and maintain Infrastructure as Code using Terraform and CloudFormation.Configure, Manage and troubleshoot Kubernetes Clusters and containers.
+
+
+OMP TENCES TECHNIQUES :
+Cloud Computing :
+AWS: EC2, S3, IAM, SecurityGroup, VPC, Lambda, RDS, Cloudformation, EKS,
+ECR.
+Azure: AKS, ACR, Blob Storage, Ressources Group, LB, Log Analytic Workspace,
+Azure DevOps.
+DevOps
+Conteneur : Docker, Podman, Kubernetes, ECS, EKS
+CI/CD : Jenkins, Gitlab, Circle CI , Argos CD
+Configuration automatique : Ansible
+IAC : Terraform
+Administration et Configuration des Syst mes :
+OS : Debian, Ubuntu.
+Stockage: NAS.
+R seau : Firewall, iptables.
+Languages: BASH, Python, Golang
+Administration de base de donn es : SQL Server, MariaDb, MySQL, PostgreSql
+Serveur d applications : Apache, Nginx
+R seaux: TCP/IP, Firewall, Load Balancing
+FORMATIONS ET CERTIFICATIONS
+2021 : CKA Certified Kubernetes Administrator
+Cloud S curit et Infrastructure
+Architecte Informatique et syst mes d informations
+
+
+
+JD for Kubernetes Administration, you can also include AWS JD along with this.
+
+ 5+ years of recent hands on development and/or DevOps experience
+ Experience deploying to and orchestrating containers (Docker, Kubernetes, etc.)
+ Strong experience in Amazon EKS and Fargate
+ Experience in AWS cloud environment
+ Experience on Linux administration
+ Experience in configuration management tool such as Ansible/Chef
+ Experience building, updating and managing Docker Images
+ Strong understanding of CI/CD Pipelines in a globally distributed environment using Git, Artifactory, Jenkins, Docker registry, etc.
+ Experience with micro-services
+ Experience building and updating CI/CD pipelines Scripting skills e.g. Bash, Python
+ Experience with deploying and managing micro-services using container orchestration platforms
+ Experienced in building solutions for monitoring, logging, security, and scalability of applications
+ Preferred experience with the following:
+Docker/Kubernetes
+Jenkins or other CI tools
+Familiarity with cloud applications and micro-service architectures
+Certified Kubernetes Administrator (CKA) and/or
+Certified Kubernetes Application Developer (optional)
+
+
+Experience working in IT infrastructure background specially with Open-source Software.
+Experience with Cloud native containers and Kubernetes orchestration is required.
+Experience in tools like spinnaker, Jenkins or equivalent required.
+Experience with container and orchestration technology of azure / gap is required.
+Experience with Automation tools like ansible, terraform etc. will be added advantage.
+Expertise on Linux and container technologies is required
+Experience in automation tools such as Ansible, Terraform is highly desirable
+Shell scripting skills are required
+Desire skills required
+Certifications like Kubernetes Administrator or Developer (CKA/CKD ) is desired.
+Certification in AWS/Azure/GCP will be added advantage
+Experience working in the BFSI domain is preferred.
+
+
+
+Bachelor’s Degree or equivalent experience required
+5 years of overall experience in software engineering
+At least 3 years of hands on experience as Docker engineer performing
+Kubernetes administration
+Container image life cycle management ( test, patch, deploy)
+Container networking
+Container storage management
+At least 1 year hands on experience in Ansible automation
+Mandatory
+
+CKA (Certified Kubernetes Administrator)
+Strong critical thinker with problem solving aptitude
+Good background in Linux / Unix Administration
+Working knowledge of Python or Shell Scripts
+Good understanding of CI/CD pipelines
+Plus
+
+Hands on experience on Application Server configuration and management (eg. Tomcat, WebSphere)
+Knowledge or experience with Mongo DB, Elasticsearch, Redis
+CKD (Certified Kubernetes Developer)
+
+
