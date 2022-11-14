@@ -1,3 +1,5 @@
+kubectl -n kubernetes-dashboard create token admin-user
+
 tcpdump -i any -c10 -nn -A port 5000
 
 docker save -o baseapis31.tar baseapis:05112231
