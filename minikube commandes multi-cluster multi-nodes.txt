@@ -1,3 +1,5 @@
+#copy from ubuntu to Windows
+scp jewel@176.35.96.32:/usr/local/forme/logs.zip 'D:/forme'
 #ajout ric comme user dans docker:
 sudo usermod -aG docker ric
 #avant minikube start, donner les droits de création des ces dossiers
