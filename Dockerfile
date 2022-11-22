@@ -4,7 +4,7 @@ LABEL maintainer="Richard"
 #create directory
 RUN mkdir /bases
 #copiying source code to container
-ADD https://github.com/Roccolib/kube/blob/main/pythonfiles.tar.gz ./bases/pythonfiles/
+ADD https://github.com/Roccolib/kube/blob/main/orchestre.py ./bases/pythonfiles/
 #home directory for container
 WORKDIR /bases/pythonfiles
 #install python 3.9
