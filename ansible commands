@@ -11,4 +11,11 @@ ansible all -m apt -a "name=vim state=latest" -u ric
 ansible servers -a "uptime" -u ric
 #ping specified hosts:
 ansible server1:server2 -m ping -u ric
-
+#run playbook on a specific host:
+ansible-playbook -l server1 myplaybook.yml
+#list all tasks that will be executed by a playbook:
+ansible-playbook myplaybook.yml --list-tasks
+#list all hosts that will be concerned by a playbook:
+ansible-playbook myplaybook.yml --list-hosts
+#entry point start playbook from a specific task:
+ansible-playbook myplaybook.yml --start-at-task="Set Up Nginx"
