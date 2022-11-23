@@ -1,0 +1,14 @@
+
+# ansible inventory:
+ansible-inventory --list -y
+# ping to test connection
+ansible all -m ping -u ric
+#get disk usage for machines
+ansible all -a "df -h" -u ric
+# install "vim" on all machines:
+ansible all -m apt -a "name=vim state=latest" -u ric
+#check "uptime" of machines:
+ansible servers -a "uptime" -u ric
+#ping specified hosts:
+ansible server1:server2 -m ping -u ric
+
