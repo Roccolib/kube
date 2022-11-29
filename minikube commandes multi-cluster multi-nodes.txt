@@ -37,6 +37,11 @@ k get endpoints
 minikube ssh -p node --node=node-m02 ls
 #executer commande minikube vers autre node:
 
+#tarrer un fichier sous linux:
+tar -cvf baseapis.tar
+#detarrer un fichier sous linux:
+tar -xvf baseapis.tar
+
 #copy from host to node via ssh:
 scp admin.conf 192.168.67.3:/etc/kubernetes/admin.conf
 scp /etc/kubernetes/admin.conf 192.168.67.4:/etc/kubernetes/admin.conf
