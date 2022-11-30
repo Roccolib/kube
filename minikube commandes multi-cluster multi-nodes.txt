@@ -1,3 +1,5 @@
+#changer le namespace par defaut:
+kubectl config set-context –current –namespace=K21
 #copy from ubuntu to Windows
 scp jewel@176.35.96.32:/usr/local/forme/logs.zip 'D:/forme'
 #ajout ric comme user dans docker:
