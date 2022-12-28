@@ -1,0 +1,33 @@
+2012 - Present10 years
+
+France, Lebanon
+
+Avant:
+Development of APIs and webhooks to tokenize data posted on the Forum via AED patterns
+Capturing and processing messages via Python APIs and Kafka Middleware
+Publication of data processed with Python APIs on the blockchain and creation of tasks
+for transaction validation
+Via Kafka APIs, and webhooks, recovery of the value of created tokens
+Design of a modular and scalable architecture
+Containerization, isolation of application layers and data feed persistent
+Design of network parts
+Encrypt data in transit with TLS
+Designing and Running CI/CD Chains with Azure DevOps
+Provision of PaaS development environments integrating all of the the development environment
+Scripts for updating environments and non-regression tests with Kitchen
+Chains of integration, unit tests and integration with Kitchen
+POC to evaluate the containerization solutions of the differents modules of the application with regard to cost constraints
+POC with AKS, Docker, Ingress.../ Az VM, Docker with private cloud, Docker Kubernetes
+
+Environment: Github, Kitchen, Azure Devops, ARM, Azure VM, Discourse, Python, Kafka,
+SonarCube, sublime, PyCharm, Kubernetes, docker, Postman
+
+Apres:
+CI/CD with ansible : creation of playbooks to declare user, install apps (docker, kubernetes), deployment of images and then Python, Kafka and personnal python'apis.
+networkPolicies on pods : set of networkPolicies to declare each ingress/egress rule for each pod and pod's group.
+Ingress Controller + clusterIP : deployment of a loadBalancer(metallb) and Ingress Controller to acces only one pod from outside the Net.
+gpu : 
+statefulset deployment
+persisant volumes
+
+
