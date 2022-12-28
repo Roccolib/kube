@@ -1,7 +1,3 @@
-2012 - Present10 years
-
-France, Lebanon
-
 Avant:
 Development of APIs and webhooks to tokenize data posted on the Forum via AED patterns
 Capturing and processing messages via Python APIs and Kafka Middleware
@@ -23,11 +19,11 @@ Environment: Github, Kitchen, Azure Devops, ARM, Azure VM, Discourse, Python, Ka
 SonarCube, sublime, PyCharm, Kubernetes, docker, Postman
 
 Apres:
-CI/CD with ansible : creation of playbooks to declare user, install apps (docker, kubernetes), deployment of images and then Python, Kafka and personnal python'apis.
+CI/CD with ansible : creation of playbooks to declare user, install apps (docker, kubernetes), deploy images and Python, Kafka and personnal python'apis.
 networkPolicies on pods : set of networkPolicies to declare each ingress/egress rule for each pod and pod's group.
 Ingress Controller + clusterIP : deployment of a loadBalancer(metallb) and Ingress Controller to acces only one pod from outside the Net.
-gpu : 
-statefulset deployment
-persisant volumes
+gpu : study of best apis and drivers pattern to use to optimise calculations with gpus and Kubernetes
+statefulset deployment : settings of kubernetes pods to use Kafka in a statefull state in Kubernetes to consume messages from Kafka pod.
+Provision and creation of persisent volumes and pvc to make datas from kafka persistent.
 
 
