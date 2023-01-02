@@ -3,6 +3,7 @@ kubectl -n kubernetes-dashboard create token admin-user
 tcpdump -i any -c10 -nn -A port 5000
 #get CIDR range
 ps -aux | grep kube-apiserver | grep service-cluster-ip-range
+kubeadm config print init-defaults
 
 docker save -o baseapis31.tar baseapis:05112231
 sudo ctr -n=k8s.io images import baseapis31.tar
