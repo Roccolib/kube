@@ -1,3 +1,5 @@
+#liste des versions Kubernetes:
+curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages | grep Version | awk '{print $2}'
 #changer le namespace par defaut:
 kubectl config set-context –current –namespace=K21
 #separer un fichier .tar en plusieurs parties
